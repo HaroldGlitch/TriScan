@@ -1,16 +1,10 @@
 ## Requisitos
 Script para analisis de Nmap para sistemas operativos Linux
 
-Para ejecturar TriScan lo primero que necesitas es tener wget instalado, si no lo tienes instalado utiliza el siguiente comando:
+Para ejecturar TriScan lo primero que necesitas descargar los archivos necesarios
 
 ```
-apt-get install wget
-```
-
-Una vez instalado se utiliza wget para descargar los archivos necesarios
-
-```
-wget https://drive.google.com/drive/folders/1ZOo7SnJ-1AlabS6oMLmtmxckez-Sn78z?usp=sharing
+git clone https://github.com/HaroldGlitch/TriScan.git
 ```
 
 Luego de esto dentro de la carpeta de TriScan se ejecuta el archivo con los requisitos con privilegios de administrados

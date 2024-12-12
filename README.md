@@ -1,7 +1,7 @@
 ## Requisitos
 Script para analisis de Nmap para sistemas operativos Linux
 
-Para ejecturar TriScan lo primero que necesitas descargar los archivos necesarios
+Para ejecturar TriScan lo primero que necesitas descargar los archivos necesarios, en caso de no tener git instalarlo primero
 
 ```
 git clone https://github.com/HaroldGlitch/TriScan.git
@@ -11,6 +11,9 @@ Luego de esto dentro de la carpeta de TriScan se ejecuta el archivo con los requ
 
 ```
 cd TriScan
+```
+```
+sudo chmod +x ./requirements.sh
 ```
 ```
 sudo ./requirements.sh

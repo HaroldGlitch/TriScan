@@ -23,7 +23,7 @@ Luego de esto dentro de la carpeta de TriScan se ejecuta el archivo con los requ
 sudo ./run.sh
 ```
 
-##Manual de uso
+## Manual de uso
 **requirements.sh**
     - Es el que se encarga de instalar los requirimientos minimos para el correcto funcionamiento del proyecto
 

@@ -27,35 +27,7 @@ subnet=$ip_info
 # Limpiar y preparar el archivo de salida
 > $output_file
 
-# Comprobar si hay host activos
-if [ ! -s "$output_file" ]; then
-    scan_hosts
-    exit 1
-fi
-echo "Se encontraron Host activos."
-
-# Selección del tipo de escaneo
-echo "Selecciona una de las siguientes opciones"
-echo "1) Volver a escanear la red"
-echo "2) Usar estos hosts"
-echo "3) Salir"
-
-read -p "Introduce tu elección [1-3]: " choice
-
-case $choice in
-    1)
-        scan_hosts
-        ;;
-	2)
-        choose_scan
-        ;;
-    *)
-        echo "Saliendo."
-        exit 1
-        ;;
-esac
-
-
+# Escanea los Hosts de la red
 scan_hosts() {
 	# Escaneo con Nmap
 	echo "Iniciando escaneo en la subred $subnet..."
@@ -102,5 +74,33 @@ choose_scan() {
 
 	echo "El escaneo seleccionado ha sido completado."
 }
+
+# Comprobar si hay host activos
+if [ ! -s "$output_file" ]; then
+    scan_hosts
+    exit 1
+fi
+echo "Se encontraron Host activos."
+
+# Selección del tipo de escaneo
+echo "Selecciona una de las siguientes opciones"
+echo "1) Volver a escanear la red"
+echo "2) Usar estos hosts"
+echo "3) Salir"
+
+read -p "Introduce tu elección [1-3]: " choice
+
+case $choice in
+    1)
+        scan_hosts
+        ;;
+	2)
+        choose_scan
+        ;;
+    *)
+        echo "Saliendo."
+        exit 1
+        ;;
+esac
 
 

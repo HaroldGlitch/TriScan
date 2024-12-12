@@ -24,9 +24,6 @@ if [ -z "$ip_info" ]; then
 fi
 subnet=$ip_info
 
-# Limpiar y preparar el archivo de salida
-> $output_file
-
 # Escanea los Hosts de la red
 scan_hosts() {
 	# Escaneo con Nmap
@@ -77,6 +74,7 @@ choose_scan() {
 
 # Comprobar si hay host activos
 if [ ! -s "$output_file" ]; then
+	touch $output_file
     scan_hosts
     exit 1
 fi
@@ -92,6 +90,9 @@ read -p "Introduce tu elección [1-3]: " choice
 
 case $choice in
     1)
+		# Limpiar y preparar el archivo de salida
+		> $output_file
+		
         scan_hosts
         ;;
 	2)

@@ -24,17 +24,17 @@ sudo ./run.sh
 ```
 
 ## Manual de uso
-**requirements.sh**
-    - Es el que se encarga de instalar los requirimientos minimos para el correcto funcionamiento del proyecto
+* requirements.sh
+Es el que se encarga de instalar los requerimientos minimos para el correcto funcionamiento del proyecto
 
-**run.sh**
-    - Script principal desde donde se realiazan los escaneos
+* run.sh
+Script principal desde donde se realiazan los escaneos
 
-**fast_scan.sh**
-    - Realiza un escaneo rapido de los 1000 primeros puertos a los equipos encontrados
+* fast_scan.sh
+Realiza un escaneo rapido de los 1000 primeros puertos a los equipos encontrados
 	
-**complete_scan.sh**
-    - Realiza un escaneo de todos los equipos encontrados con sus respectivas vulnerabilidades, puede tardar un tiempo en ejecutarse debido a la naturaleza del escaneo
+* complete_scan.sh
+Realiza un escaneo de todos los equipos encontrados con sus respectivas vulnerabilidades, puede tardar un tiempo en ejecutarse debido a la naturaleza del escaneo
 
-**stealthy.sh**
-    - Realiza un escaneo sigiloso de los 1000 primeros puertos, para evitar los IDS/IPD, puede tardar un tiempo en ejecutarse debido a la naturaleza del escaneo
+* stealthy.sh
+Realiza un escaneo sigiloso de los 1000 primeros puertos, para evitar los IDS/IPD, puede tardar un tiempo en ejecutarse debido a la naturaleza del escaneo

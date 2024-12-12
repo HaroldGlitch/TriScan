@@ -29,7 +29,6 @@ run_nmap_scan() {
   rate=1000
   timing=4
   output_file="${full_session_dir}/nmap_results_${target}.txt"
-  xml_output_file="${full_session_dir}/nmap_results_${target}.xml"
 
   # Inicializa el archivo del reporte del escaneo
   echo "Resultados del escaneo completo Nmap para $target" > $output_file
@@ -60,7 +59,7 @@ run_nmap_scan() {
   nmap -Pn -R -p $open_ports $target >> $output_file
   nmap -Pn -sU -p 53,67-69,161 $target >> $output_file  # Escaneo UDP para los puertos comunes
   nmap -Pn -sO $target >> $output_file  
-  nmap -Pn -oX $xml_output_file -p $open_ports $target  # Archivo XML
+L
 }
 
 # Direccion de los objetivos .txt

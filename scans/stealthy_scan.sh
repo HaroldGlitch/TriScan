@@ -26,9 +26,7 @@ run_stealthy_nmap_scan() {
     return
   fi
 
-  timing=2  # Esto para evitar detencion
   output_file="${full_session_dir}/nmap_results_${target}.txt"
-  xml_output_file="${full_session_dir}/nmap_results_${target}.xml"
 
   # Inicializa el archivo del reporte del escaneo
   echo "Resultados del escaneo sigiloso Nmap para $target" > $output_file
@@ -39,9 +37,6 @@ run_stealthy_nmap_scan() {
 
   # Escaneo con decoy
   nmap -Pn -sS -D RND:10 $target >> $output_file
-
-  # Reporte xml del escaneo
-  nmap -Pn -sS -T $timing -oX $xml_output_file $target
 }
 
 # Direccion de los objetivos .txt

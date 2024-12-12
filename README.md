@@ -2,13 +2,11 @@
 Script para analisis de Nmap para sistemas operativos Linux
 
 Para ejecturar TriScan lo primero que necesitas descargar los archivos necesarios, en caso de no tener git instalarlo primero
-
 ```
 git clone https://github.com/HaroldGlitch/TriScan.git
 ```
 
 Luego de esto dentro de la carpeta de TriScan se ejecuta el archivo con los requisitos con privilegios de administrados
-
 ```
 cd TriScan
 ```
@@ -19,8 +17,9 @@ sudo chmod +x ./requirements.sh
 sudo ./requirements.sh
 ```
 
-Luego de esto ya se podra utilizar el comando run cada vez que sea necesario para el analisis de la red
+Luego de esto dentro de la carpeta de TriScan se ejecuta el archivo con los requisitos con privilegios de administrados
 
 ```
 sudo ./run.sh
 ```
+

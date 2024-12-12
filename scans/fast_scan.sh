@@ -29,7 +29,6 @@ run_fast_nmap_scan() {
   rate=1000
   timing=4
   output_file="${full_session_dir}/nmap_results_${target}.txt"
-  xml_output_file="${full_session_dir}/nmap_results_${target}.xml"
 
   # Inicializa el archivo del reporte del escaneo
   echo "Resultados del escaneo rapido Nmap para $target" > $output_file

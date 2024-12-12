@@ -41,7 +41,6 @@ scan_hosts() {
 		exit 1
 	fi
 	echo "Hosts activos encontrados y guardados en $output_file."
-	choose_scan
 }
 
 # Selección del tipo de escaneo
@@ -70,13 +69,34 @@ choose_scan() {
 	esac
 
 	echo "El escaneo seleccionado ha sido completado."
+	re-scan
+}
+# Vuelve a escanear la red con los host ya identificados
+re-scan(){
+	while true; do
+		# Preguntar al usuario
+		read -p "¿Desea realizar otro escaneo? (s/n): " answer
+
+		case $answer in
+			[sS]|[sS][iI])
+				choose_scan
+				;;
+			[nN]|[nN][oO])
+				echo "Saliendo..."
+				exit 0
+				;;
+			*)
+				echo "Por favor, responda 's' para sí o 'n' para no."
+				;;
+		esac
+	done
 }
 
 # Comprobar si hay host activos
 if [ ! -s "$output_file" ]; then
 	touch $output_file
-    scan_hosts
-    exit 1
+	scan_hosts
+	choose_scan
 fi
 echo "Se encontraron Host activos."
 
@@ -93,6 +113,7 @@ case $choice in
 	# Limpiar y preparar el archivo de salida
 	> $output_file
 	scan_hosts
+	choose_scan
         ;;
 	2)
         choose_scan
@@ -102,5 +123,3 @@ case $choice in
         exit 1
         ;;
 esac
-
-

@@ -87,5 +87,5 @@ check_nmap
 # Revisa si las vulnerabilidades estan instaladas, en caso contrario las descarga
 check_vulners
 
-# Cambia lso permisos de ejecucion de los script que se utilizan durante la ejecucion del programa
+# Cambia los permisos de ejecucion de los script que se utilizan durante la ejecucion del programa
 set_execution_permissions

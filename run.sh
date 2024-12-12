@@ -29,7 +29,7 @@ subnet=$ip_info
 
 # Comprobar si hay host activos
 if [ ! -s "$output_file" ]; then
-    echo "No se encontraron hosts activos."
+    scan_hosts
     exit 1
 fi
 echo "Se encontraron Host activos."

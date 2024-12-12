@@ -47,19 +47,18 @@ run_nmap_scan() {
   # Detecta la version de los servicios en los puertos
   nmap -Pn -sV --version-all -p $open_ports $target >> $output_file
 
-  # Detecta el sistema operativo 
+  # Detecta el sistema operativo
   nmap -Pn -O -p $open_ports $target >> $output_file
 
   # Se realiza un escaneo de vulnerabilidades
   nmap -sV -Pn --script=vuln,safe -p $open_ports $target >> $output_file
 
   # Escaneos adicionales
- 
   nmap -Pn --traceroute -p $open_ports $target >> $output_file
   nmap -Pn -R -p $open_ports $target >> $output_file
   nmap -Pn -sU -p 53,67-69,161 $target >> $output_file  # Escaneo UDP para los puertos comunes
-  nmap -Pn -sO $target >> $output_file  
-L
+  nmap -Pn -sO $target >> $output_file
+
 }
 
 # Direccion de los objetivos .txt

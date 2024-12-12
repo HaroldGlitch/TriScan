@@ -29,7 +29,7 @@ check_nmap() {
         echo "Nmap ya está instalado en este sistema."
     else
         echo "Nmap no está instalado. Procediendo con la instalación..."
-		install_nmap
+	install_nmap
     fi
 }
 

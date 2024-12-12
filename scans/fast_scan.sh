@@ -40,7 +40,7 @@ run_fast_nmap_scan() {
   # Detecta la version de los servicios en los puertos
   nmap -Pn -sV --version-light -F $target >> $output_file
 
-  # Detecta el sistema operativo 
+  # Detecta el sistema operativo
   nmap -Pn -O -F $target >> $output_file
 }
 

@@ -10,7 +10,7 @@ results_dir="results"
 session_dir=$(date +"%Y-%m-%d-%H:%M:%S")
 full_session_dir="${results_dir}/${session_dir}"
 
-# Create directories if they don't exist
+# Se crean los directiorios en caso de no existir
 mkdir -p $results_dir $full_session_dir
 
 echo "Escaneo Sigiloso iniciado"

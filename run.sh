@@ -90,10 +90,9 @@ read -p "Introduce tu elección [1-3]: " choice
 
 case $choice in
     1)
-		# Limpiar y preparar el archivo de salida
-		> $output_file
-		
-        scan_hosts
+	# Limpiar y preparar el archivo de salida
+	> $output_file
+	scan_hosts
         ;;
 	2)
         choose_scan
